@@ -3,7 +3,7 @@
 Set's `visible` to true when the viewport crosses the set threshold of the element.
 
 ```
-<intersection-observer-element visible="{{{visible}}">
+<intersection-observer-element visible="{{visible}}">
     <div>  
         ...
     </div>
