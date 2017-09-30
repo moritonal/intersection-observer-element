@@ -1,18 +1,28 @@
 # \<intersection-observer-element\>
 
-Reflects contained elements visibility in attributes
+Set's `visible` to true when the viewport crosses the set threshold of the element.
 
-## Install the Polymer-CLI
+```
+<intersection-observer-element visible="{{{visible}}">
+    <div>  
+        ...
+    </div>
+</intersection-observer-element>
+```
+
+## Developing
+
+### Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
 
-## Viewing Your Element
+### Viewing Your Element
 
 ```
 $ polymer serve
 ```
 
-## Running Tests
+### Running Tests
 
 ```
 $ polymer test
