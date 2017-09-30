@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+	<title>intersection-observer-element demo</title>
+
+	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+	<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+	<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+	<link rel="import" href="../intersection-observer-element.html">
+
+	<custom-style>
+		<style is="custom-style" include="demo-pages-shared-styles">
+			.container {
+				max-height: 200px;
+				overflow-y: scroll;
+				border: 1px solid black;
+			}
+
+			.container > div {
+				min-height: 350px;
+				display: flex;
+				flex-direction: column;
+			}
+
+			intersection-observer-element {
+				transition: background-color 1s;
+
+				min-height: 50px;
+				max-height: 50px;
+
+				text-align: center;
+
+				margin: 25px;
+			}
+
+			intersection-observer-element[visible] {
+				background-color: lightblue;
+			}
+		</style>
+	</custom-style>
+</head>
+
+<body>
+	<div class="vertical-section-container centered">
+		<h3>Basic intersection-observer-element demo</h3>
+		<demo-snippet>
+			<template>
+				<div class="container">
+					<div>
+						<intersection-observer-element>
+							<span>1</span>
+						</intersection-observer-element>
+
+						<intersection-observer-element>
+							<span>2</span>
+						</intersection-observer-element>
+
+						<intersection-observer-element>
+							<span>3</span>
+						</intersection-observer-element>
+					</div>
+				</div>
+			</template>
+		</demo-snippet>
+	</div>
+</body>
+
+</html>

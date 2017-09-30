@@ -1,0 +1,87 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="intersection-observer-element">
+	<template>
+		<style>
+			:host {
+				display: block;
+			}
+		</style>
+		<div id="slottedData">
+			<slot></slot>
+		</div>
+	</template>
+
+	<script>
+		/**
+		 * `intersection-observer-element`
+		 * Reflects contained elements visibility in attributes
+		 *
+		 * @customElement
+		 * @polymer
+		 * @demo demo/index.html
+		 */
+		class IntersectionObserverElement extends Polymer.Element {
+
+			static get is() {
+				return 'intersection-observer-element';
+			}
+
+			connectedCallback() {
+
+				super.connectedCallback();
+
+				this.observer = new IntersectionObserver(this.handleIntersectionCallback.bind(this), {
+					root: document.rootElement,
+					rootMargin: "0px",
+					threshold: this.thresholds
+				});
+
+				this.observer.observe(this.$.slottedData);
+			}
+
+			handleIntersectionCallback(entries) {
+				
+				if (!document.hidden) {
+					for (let entry of entries) {
+
+						this.ratio = entry.intersectionRatio.toFixed(2)
+
+						if (this.ratio > this.visibleLimit) {
+							this.visible = true;
+						} else {
+							this.visible = false;
+						}
+					}
+				} else {
+					this.visible = false;
+				}
+			}
+
+			static get properties() {
+				return {
+					thresholds: {
+						type: Array,
+						value: [0.0, 0.25, 0.5, 0.75, 1.0]
+					},
+					visible: {
+						type: Boolean,
+						value: false,
+						reflectToAttribute: true
+					},
+					ratio: {
+						type: Number,
+						reflectToAttribute: true
+					},
+					visibleLimit: {
+						type: Number,
+						value: 0.5,
+						reflectToAttribute: true
+					}
+				};
+			}
+		}
+
+		window.customElements.define(IntersectionObserverElement.is, IntersectionObserverElement);
+	</script>
+</dom-module>
