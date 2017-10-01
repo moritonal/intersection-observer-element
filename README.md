@@ -9,6 +9,25 @@ Set's `visible` to true when the viewport crosses the set threshold of the eleme
     </div>
 </intersection-observer-element>
 ```
+## Install
+
+```
+bower install --save intersection-observer-element
+```
+
+## Options
+
+### thresholds
+
+Default - [0.0, 0.25, 0.5, 0.75, 1.0]
+
+The percentages across the element where an event is raised that the intersection has changed.
+
+### visibleLimit
+
+Default - 0.5
+
+The percentage whereby the element swaps between visible or not.
 
 ## Developing
 
