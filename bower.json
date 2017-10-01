@@ -12,5 +12,23 @@
   },
   "resolutions": {
     "polymer": "^2.0.0"
-  }
+  },
+  "homepage": "https://github.com/Glitch0011/intersection-observer-element",
+  "authors": [
+    "Tom Bonner <tom@bonner.is>"
+  ],
+  "keywords": [
+    "polymer",
+    "webcomponents",
+    "intersection-observer",
+    "customelement"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
