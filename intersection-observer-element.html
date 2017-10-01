@@ -45,7 +45,7 @@
 				if (!document.hidden) {
 					for (let entry of entries) {
 
-						this.ratio = entry.intersectionRatio.toFixed(2)
+						this.ratio = Number(entry.intersectionRatio).toFixed(2);
 
 						if (this.ratio > this.visibleLimit) {
 							this.visible = true;
