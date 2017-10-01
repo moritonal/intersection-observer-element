@@ -45,16 +45,16 @@
 				if (!document.hidden) {
 					for (let entry of entries) {
 
-						this.ratio = Number(entry.intersectionRatio).toFixed(2);
+						this._setRatio(Number(entry.intersectionRatio).toFixed(2));
 
 						if (this.ratio > this.visibleLimit) {
-							this.visible = true;
+							this._setVisible(true);
 						} else {
-							this.visible = false;
+							this._setVisible(false);
 						}
 					}
 				} else {
-					this.visible = false;
+					this._setVisible(false);
 				}
 			}
 
