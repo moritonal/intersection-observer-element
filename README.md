@@ -29,6 +29,12 @@ Default - 0.5
 
 The percentage whereby the element swaps between visible or not.
 
+## Polyfills
+
+This element uses the Intersection Observer Api, which whilst most modern browsers currently support, it is missing from iOS Safari. More detailed information can be found at [CanIUse](https://caniuse.com/#search=intersection).
+
+If you wish to support multiple browsers it's recommended you also use one of the Polyfills from [here](https://github.com/w3c/IntersectionObserver/tree/gh-pages/polyfill).
+ 
 ## Developing
 
 ### Install the Polymer-CLI
