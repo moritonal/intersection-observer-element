@@ -29,6 +29,12 @@ Default - 0.5
 
 The percentage whereby the element swaps between visible or not.
 
+### rootMargin
+
+Default - 1px
+
+Directly passed into IntersectionObserver class as rootMargin
+
 ## Polyfills
 
 This element uses the Intersection Observer Api, which whilst most modern browsers currently support, it is missing from iOS Safari. More detailed information can be found at [CanIUse](https://caniuse.com/#search=intersection).
