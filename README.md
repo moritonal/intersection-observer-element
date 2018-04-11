@@ -21,19 +21,19 @@ bower install --save intersection-observer-element
 
 ### thresholds
 
-Default - [0.0, 0.25, 0.5, 0.75, 1.0]
+Default: [0.0, 0.25, 0.5, 0.75, 1.0]
 
 The percentages across the element where an event is raised that the intersection has changed.
 
 ### visibleLimit
 
-Default - 0.5
+Default: 0.5
 
 The percentage whereby the element swaps between visible or not.
 
 ### rootMargin
 
-Default - 1px
+Default: 0px
 
 Directly passed into IntersectionObserver class as rootMargin
 
