@@ -5,7 +5,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0"
   },
-  "version":"1.0.5",
+  "version":"1.0.6",
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
