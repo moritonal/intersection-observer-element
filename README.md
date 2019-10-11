@@ -1,6 +1,6 @@
 # \<intersection-observer-element\>
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Glitch0011/intersection-observer-element)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/moritonal/intersection-observer-element)
 
 Set's `visible` to true when the viewport crosses the set threshold of the element.
 
